@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {   
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
             GameManager.gameManager = this;
             DontDestroyOnLoad(gameManager);
         }
+
+
     }
 
     public void OrbCollected()
@@ -40,6 +43,8 @@ public class GameManager : MonoBehaviour
     {
         Items[id].sprite = sprite;
     }
+
+
 
     void Start()
     {

@@ -117,9 +117,15 @@ public class PlayerController : MonoBehaviour
     }
 }
 */
+
+
+
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -152,7 +158,9 @@ public class PlayerController : MonoBehaviour
 
     public float input;
     private bool jumping;
-public bool canMove=true;
+    public bool canMove=true;
+
+
 
 
     private void Start()
@@ -234,8 +242,14 @@ public bool canMove=true;
 
         if (Input.GetKeyDown(KeyCode.Space) && !jumping) jump();
         foreach (Touch t in Input.touches) if (t.tapCount == 2 && !jumping) jump();
+      
        //CheckPlayerTouch();
         }
+
+         /*if(Input.GetKeyDown(KeyCode.R))
+        {
+            Restart ();
+        }*/
         
     }
 
@@ -288,4 +302,8 @@ public bool canMove=true;
         //AudioManager.PlayJump();
         _animator.SetBool("Jump", true);
     }
+    /*private void Restart ()
+     {
+        SceneManager.LoadScene("SampleScene");
+     }*/
 }

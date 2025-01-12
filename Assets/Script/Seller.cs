@@ -16,7 +16,7 @@ public class Seller : MonoBehaviour
     {
         if(_canBuy)
         {
-                    VCamDisable.gameObject.SetActive(false);
+        VCamDisable.gameObject.SetActive(false);
         VCamEnable.gameObject.SetActive(true);
 
 
